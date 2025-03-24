@@ -11,10 +11,10 @@ public class RequestProcessor {
         HttpRequest request = context.getRequest();
         HttpResponse response = context.getResponse();
         if (request.getUrl().equals("/")) {
-            response.ok("c est bon !")
+            response.ok("c est bon !");
         } else {
-            response.notFound("c est pas trouvé !")
+            response.notFound("c est pas trouvé !");
         }
-
+        context.close();
     }
 }

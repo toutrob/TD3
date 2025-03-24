@@ -30,4 +30,14 @@ public class HttpResponse {
             System.out.println(e.getMessage());
         }
     }
+
+    public void sendContent(String contentType, String content) {
+        try {
+            output.write("HTTP/1.0 200 OK\r\n");
+            output.write(content);
+            output.flush();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }
